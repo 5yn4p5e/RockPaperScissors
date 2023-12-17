@@ -1,0 +1,16 @@
+.playingField, .playerActions {
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.playerMove, player.button{
+    display: flex;
+    margin: 25px;
+}
+
+.currentWinner {
+    color : green;
+}

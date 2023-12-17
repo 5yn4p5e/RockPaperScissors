@@ -1,6 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import {PlayingFieldComponent} from "./app/components/playing-field/playing-field.component";
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(PlayingFieldComponent, appConfig)
+    .catch((err) => console.error(err));

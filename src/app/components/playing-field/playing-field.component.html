@@ -1,0 +1,24 @@
+<div class="playingField">
+    <div class="scoreboard">
+        <div><span [class.currentWinner]="countPlayerWins > countBotWins">{{ countPlayerWins }}&nbsp;Вы</span></div>
+        <div><span [class.currentWinner]="countBotWins > countPlayerWins">{{ countBotWins }}&nbsp;Компьютер</span></div>
+    </div>
+    <div class="info">
+        <div class="result" [hidden]="resultValue == Results.DoesNotStarted">
+            Компьютер выбрал <view-move [moveView]="botMoveView"></view-move>.
+            <view-result [result]="resultView"></view-result>.
+        </div>
+    </div>
+    <div class="playerLayout">
+        <div class ="playerMove">
+            <div><view-move [moveView]="playerMoveView"></view-move></div>
+        </div>
+        <div class ="playerActions">
+            <player (onChanged)="onPlayerChooses($event)"></player>
+            <button [disabled]="playerMoveValue == Moves.DoesNotStarted" (click)="onPlay()">Играть</button>
+            <button [disabled]="resultValue == Results.DoesNotStarted" (click)="onReset()">Сброс</button>
+        </div>
+    </div>
+</div>
+
+
